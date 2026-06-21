@@ -1,0 +1,81 @@
+.main-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-image: linear-gradient(to bottom, rgb(86, 86, 255), violet);
+  color: white;
+
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
+  width: 100vw;
+  margin-inline: calc(-50vw + 50%);
+}
+
+.welcome-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.obs-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+
+}
+
+.obs-box {
+  width: 400px;
+  max-width: 90%;
+  color: white;
+  background-color: red;
+  border: 4px solid yellow;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-screen {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+
+}
+
+.form-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  border: 5px solid rgb(0, 150, 13);
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  color: black;
+}
+
+.form-group {
+  border: 2px solid black;
+  background-color: lightsalmon;
+  width: 200px;
+  border-radius: 10px;
+  color: black;
+}
