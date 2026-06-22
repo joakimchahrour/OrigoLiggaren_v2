@@ -84,3 +84,13 @@
   border-radius: 10px;
   color: black;
 }
+
+.after-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.submit-reminder {
+  font-size: 14px;
+}
