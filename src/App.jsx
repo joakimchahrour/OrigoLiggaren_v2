@@ -104,7 +104,7 @@ function WorkerForm() {
       <div className='after-form'>
         <h3>You have worked for: {calculateDuration()}</h3>
 
-        <b>Don't forget to submit</b>
+        <b className='submit-reminder'>Don't forget to submit</b>
 
         <button type='button'>Submit</button>
       </div>
