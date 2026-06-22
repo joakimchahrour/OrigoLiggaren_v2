@@ -101,13 +101,11 @@ function WorkerForm() {
         />
       </div>
 
-      <div className='duration-display'>
+      <div className='after-form'>
         <h3>You have worked for: {calculateDuration()}</h3>
-      </div>
 
-      <b>Don't forget to submit</b>
+        <b>Don't forget to submit</b>
 
-      <div>
         <button type='button'>Submit</button>
       </div>
     </div>
