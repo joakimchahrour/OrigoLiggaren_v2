@@ -4,7 +4,7 @@ import './App.css';
 function ObsBox() {
   return (
     <div className='obs-box'>
-      <h2>OBS</h2>
+      <h1>OBS</h1>
       <p>This is a test of a new system. If something happens we still need your information. So please, for legal reasons, fill in the physical book as well. Thank you!</p>
     </div>
   );
