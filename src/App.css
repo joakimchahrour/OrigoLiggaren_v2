@@ -9,6 +9,7 @@
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 .welcome-page {
@@ -20,6 +21,7 @@
   align-items: center;
   scroll-snap-align: start;
   flex-shrink: 0;
+  text-align: center;
 }
 
 .obs-section {
@@ -31,7 +33,6 @@
   align-items: center;
   scroll-snap-align: start;
   flex-shrink: 0;
-
 }
 
 .obs-box {
