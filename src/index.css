@@ -1,8 +1,7 @@
 :root {
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --font-main: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
+  font: 18px/145% var(--font-main);
   letter-spacing: normal;
 
   text-rendering: optimizeLegibility;

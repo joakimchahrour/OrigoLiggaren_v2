@@ -22,6 +22,8 @@
   scroll-snap-align: start;
   flex-shrink: 0;
   text-align: center;
+
+  font-size: 25px;
 }
 
 .obs-section {
