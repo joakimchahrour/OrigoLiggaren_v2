@@ -1,0 +1,97 @@
+:root {
+  --phi: 1.6180339887498948482;
+  --base-height: 700px
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+}
+
+.welcome-section,
+.obs-section,
+.form-section {
+  display: flex;
+
+  scroll-snap-align: start;
+
+  height: 100vh;
+  width: 100%;
+}
+
+.welcome-section {
+  background-color: brown;
+
+}
+
+.obs-section {
+  background-color: blueviolet;
+}
+
+.obs-box {
+
+}
+
+.form-section {
+  background-color: blue;
+}
+
+.form-box {
+
+}
+
+.form-group {
+
+}
+
+.after-form {
+
+}
+
+.submit-reminder {
+ 
+}
+
+@media (max-width: 768px) {
+  .welcome-page {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .obs-box,
+  .form-box {
+    height: auto;
+    max-width: 85vh;
+    width: 90%;
+    aspect-ratio: auto;
+
+    padding: 25px;
+    overflow-y: auto;
+  }
+
+  .obs-box {
+    font-size: 20px;
+  }
+
+  .form-box {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .form-group {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: auto;
+    font-size: 14px;
+  }
+}

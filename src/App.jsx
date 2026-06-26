@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import './App.css';
+import './App_v2.css';
 
 function ObsBox() {
   return (
@@ -131,7 +131,7 @@ function App() {
   return (
     <div className="main-page">
 
-      <section className='welcome-page'>
+      <section className='welcome-section'>
         <h1>Welcome to Origo Liggaren</h1>
         <p>Hi! I am Origo Liggaren. I have left the physical world and transcended into digital land. Thank you for working at Origo, you keep this place running! Please enter your information for the BGC below.</p>
       </section>
@@ -146,7 +146,7 @@ function App() {
       </section>
 
       {hasReadWarning && (
-        <section ref={formSectionRef} className='form-screen'>
+        <section ref={formSectionRef} className='form-section'>
           <WorkerForm />
         </section>  
       )}

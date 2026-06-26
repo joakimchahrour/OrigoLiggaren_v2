@@ -3,47 +3,6 @@
   --base-height: 700px
 }
 
-@media (max-width: 768px) {
-  .welcome-page {
-    font-size: 18px;
-    padding: 20px;
-  }
-
-  .obs-box,
-  .form-box {
-    height: auto;
-    max-width: 85vh;
-    width: 90%;
-    aspect-ratio: auto;
-
-    padding: 25px;
-    overflow-y: auto;
-  }
-
-  .obs-box {
-    font-size: 20px;
-  }
-
-  .form-box {
-    flex-direction: column;
-    justify-content: start;
-    gap: 15px;
-  }
-
-  .form-group {
-    width: 100%;
-    height: auto;
-    aspect-ratio: auto;
-    padding: 10px;
-  }
-
-  .form-group input,
-  .form-group select {
-    width: 100%;
-    font-size: 16px;
-  }
-}
-
 .main-page {
   display: flex;
   align-items: center;
@@ -139,7 +98,6 @@
   aspect-ratio: 1 / var(--phi);
 
   display: flex;
-  flex-direction: column;
   align-items: center;
 
   border: 2px solid black;
@@ -158,4 +116,44 @@
 
 .submit-reminder {
   font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .welcome-page {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .obs-box,
+  .form-box {
+    height: auto;
+    max-width: 85vh;
+    width: 90%;
+    aspect-ratio: auto;
+
+    padding: 25px;
+    overflow-y: auto;
+  }
+
+  .obs-box {
+    font-size: 20px;
+  }
+
+  .form-box {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .form-group {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: auto;
+    font-size: 14px;
+  }
 }
