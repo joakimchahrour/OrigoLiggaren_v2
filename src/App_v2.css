@@ -68,6 +68,10 @@
   color: aqua;
   user-select: none;
 
+  text-shadow:
+    -40px 0 0 aqua,
+    40px 0 0 aqua;
+
   animation: bounce 3s infinite;
 }
 
