@@ -7,7 +7,7 @@ function ObsBox() {
       <h1>OBS</h1>
       <p>This is a test of a new system. If something happens we still need your information. So please, for legal reasons, fill in the physical book as well. Thank you!</p>
     </div>
-  );
+  ); 
 }
 
 function WorkerForm() {
@@ -134,6 +134,8 @@ function App() {
       <section className='welcome-section'>
         <h1>Welcome to Origo Liggaren</h1>
         <p>Hi! I am Origo Liggaren. I have left the physical world and transcended into digital land. Thank you for working at Origo, you keep this place running! Please enter your information for the BGC below.</p>
+
+        <div className='scroll-arrow'>⬇</div>   
       </section>
 
       <section className='obs-section'>
@@ -143,6 +145,8 @@ function App() {
             I have read and understood the information. Press to proseed.
           </button>
         )}
+
+        {hasReadWarning && <div className='scroll-arrow'>⬇</div>}
       </section>
 
       {hasReadWarning && (

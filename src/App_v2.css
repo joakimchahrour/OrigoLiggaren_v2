@@ -10,12 +10,15 @@
   overflow: auto;
   scroll-snap-type: y mandatory;
   scroll-snap-stop: always;
+
+  height: 100vh;
 }
 
 .welcome-section,
 .obs-section,
 .form-section {
   display: flex;
+  flex-shrink: 0;
 
   scroll-snap-align: start;
 
@@ -54,6 +57,30 @@
 
 .submit-reminder {
  
+}
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+
+  font-size: 32px;
+  color: aqua;
+  user-select: none;
+
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-15px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-7px);
+  }
 }
 
 @media (max-width: 768px) {
