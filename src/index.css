@@ -3,6 +3,7 @@
 
   font: 18px/145% var(--font-main);
   letter-spacing: normal;
+  line-height: normal;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

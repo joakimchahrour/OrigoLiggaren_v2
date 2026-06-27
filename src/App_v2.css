@@ -26,6 +26,11 @@
 .form-section {
   display: flex;
   flex-shrink: 0;
+  flex-direction: column;
+  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
   scroll-snap-align: start;
 
@@ -36,8 +41,6 @@
 }
 
 .welcome-section {
-  
-
   background-color: rgba(222, 23, 195, 0.356);
 }
 
@@ -45,29 +48,32 @@
   background-color: rgba(222, 23, 195, 0.356);
 }
 
-.obs-box {
+/* .obs-box {
 
-}
+} */
 
 .form-section {
   background-color: rgba(222, 23, 195, 0.356);
 }
 
-.form-box {
+/* .form-box {
 
-}
+} */
 
 .form-group {
-
+  border: 2px solid rgba(83, 4, 194, 0.606);
+  border-radius: 10px;
+  background-color: rgba(194, 4, 118, 0.606);
 }
 
 .after-form {
-
+  display: flex;
+  flex-direction: column;
 }
 
-.submit-reminder {
+/* .submit-reminder {
  
-}
+} */
 
 .scroll-arrow {
   position: absolute;
@@ -77,12 +83,12 @@
   transform: translateX(-50%);
 
   font-size: 32px;
-  color: aqua;
+  color: rgba(180, 0, 197, 0.606);
   user-select: none;
 
   text-shadow:
-    -40px 0 0 aqua,
-    40px 0 0 aqua;
+    -40px 0 0 rgba(180, 0, 197, 0.606),
+    40px 0 0 rgba(180, 0, 197, 0.606);
 
   animation: bounce 3s infinite;
 }
@@ -99,7 +105,7 @@
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .welcome-page {
     font-size: 18px;
     padding: 20px;
@@ -137,4 +143,4 @@
     width: auto;
     font-size: 14px;
   }
-}
+} */
