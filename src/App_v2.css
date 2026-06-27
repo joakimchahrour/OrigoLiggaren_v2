@@ -3,6 +3,17 @@
   --base-height: 700px
 }
 
+.live-wallpaper {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  pointer-events: none;
+}
+
 .main-page {
   display: flex;
   flex-direction: column;
@@ -27,12 +38,11 @@
 }
 
 .welcome-section {
-  background-color: brown;
-
+  background-color: rgba(222, 23, 195, 0.356);
 }
 
 .obs-section {
-  background-color: blueviolet;
+  background-color: rgba(222, 23, 195, 0.356);
 }
 
 .obs-box {
@@ -40,7 +50,7 @@
 }
 
 .form-section {
-  background-color: blue;
+  background-color: rgba(222, 23, 195, 0.356);
 }
 
 .form-box {
@@ -63,6 +73,8 @@
   position: absolute;
   bottom: 30px;
   left: 50%;
+
+  transform: translateX(-50%);
 
   font-size: 32px;
   color: aqua;
