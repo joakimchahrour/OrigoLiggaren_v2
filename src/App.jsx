@@ -144,7 +144,7 @@ function LiveWallpaper() {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+      ctx.fillStyle = 'rgb(255, 255, 255)';
       particles.forEach((p) => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
@@ -207,8 +207,6 @@ function App() {
             I have read and understood the information. Press to proseed.
           </button>
         )}
-
-        {hasReadWarning && <div className='scroll-arrow'>⬇</div>}
       </section>
 
       {hasReadWarning && (

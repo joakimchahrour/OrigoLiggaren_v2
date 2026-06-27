@@ -1,12 +1,8 @@
-:root {
-  --phi: 1.6180339887498948482;
-  --base-height: 700px
-}
-
 .live-wallpaper {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9999;
 
   width: 100vw;
   height: 100vh;
@@ -33,11 +29,15 @@
 
   scroll-snap-align: start;
 
+  position: relative;
+
   height: 100vh;
   width: 100%;
 }
 
 .welcome-section {
+  
+
   background-color: rgba(222, 23, 195, 0.356);
 }
 
