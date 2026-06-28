@@ -1,3 +1,4 @@
+import { supabase } from './supabaseClient';
 import { useState, useRef, useEffect } from 'react';
 import './App_v2.css';
 
@@ -20,6 +21,10 @@ function WorkerForm() {
   });
   const [startTime, setStartTime] = useState("18:00");
   const [endTime, setEndTime] = useState("02:00");
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+
   const calculateDuration = () => {
     const [startHours, startMin] = startTime.split(':').map(Number);
     const [endHours, endMin] = endTime.split(':').map(Number);
@@ -39,8 +44,49 @@ function WorkerForm() {
     return `${hours} h ${min} min`;
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!name.trim() || !umuId.trim() || barlag === "initialValue" || !date) {
+      alert('Please fill out all fields before submitting!');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setStatusMessage('Sending shift data to Origo källaren...📩');
+
+    try {
+      const { error } = await supabase
+        .from('shifts')
+        .insert([
+          {
+            name: name.trim(),
+            umu_id: umuId.toLowerCase().trim(),
+            barlag: barlag,
+            work_date: date,
+            start_time: startTime,
+            end_time: endTime,
+            duration: calculateDuration(),
+          }
+        ]);
+
+        if (error) throw error;
+
+        setStatusMessage('Hours submitted successfully! Thank you! Ask your BGC for total hours worked');
+
+        setName("");
+        setUMUId("");
+        setBarlag("initialValue");
+    } catch (err) {
+      console.error("Database submission failed", err);
+      setStatusMessage("Error: Origo källaren not found. Please notify a BGC at hand.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
-    <div className='form-box'>
+    <form className='form-box' onSubmit={handleSubmit}>
       <div className="form-group">
         <label>Name: </label>
         <input
@@ -106,9 +152,14 @@ function WorkerForm() {
 
         <b className='submit-reminder'>Don't forget to submit</b>
 
-        <button type='button'>Submit</button>
+        <button type='submit' disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Submit"}
+        </button>
+
+        {statusMessage && <p className='status-indicator'>{statusMessage}</p>}
+
       </div>
-    </div>
+    </form>
   );
 }
 
