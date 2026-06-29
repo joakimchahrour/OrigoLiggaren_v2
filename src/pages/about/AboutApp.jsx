@@ -8,7 +8,7 @@ function AboutApp() {
                 <div className='nav-logo'>Origo Liggaren</div>
                 <div className='nav-links'>
                 <a href="/OrigoLiggaren_v2/">Home</a>
-                <a href="/OrigoLiggaren_v2/about_page/" className='active'>About</a>
+                <a href="/OrigoLiggaren_v2/src/pages/about/" className='active'>About</a>
                 </div>
             </nav>
 

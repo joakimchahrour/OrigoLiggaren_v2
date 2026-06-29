@@ -246,7 +246,7 @@ function HomeApp() {
         <div className='nav-logo'>Origo Liggaren</div>
         <div className='nav-links'>
           <a href="/OrigoLiggaren_v2/" className='active'>Home</a>
-          <a href="/OrigoLiggaren_v2/about_page/">About</a>
+          <a href="/OrigoLiggaren_v2/src/pages/about/">About</a>
         </div>
       </nav>
 
