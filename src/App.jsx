@@ -248,6 +248,8 @@ function App() {
         <h1>Welcome to Origo Liggaren</h1>
         <p>Hi! I am Origo Liggaren. I have left the physical world and transcended into digital land. Thank you for working at Origo, you keep this place running! Please enter your information for the BGC below.</p>
 
+        <a href="/OrigoLiggaren_v2/about_page/">Go to about page</a>
+
         <div className='scroll-arrow'>⬇</div>   
       </section>
 
