@@ -25,6 +25,9 @@ function WorkerForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
 
+  const [passcode, setPasscode] = useState("");
+  const [honeypot, setHoneypot] = useState("");
+
   const calculateDuration = () => {
     const [startHours, startMin] = startTime.split(':').map(Number);
     const [endHours, endMin] = endTime.split(':').map(Number);
@@ -47,6 +50,16 @@ function WorkerForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (honeypot.length > 0) {
+      setStatusMessage('Hours submitted successfully! Thank you!');
+      return;
+    }
+
+    if (passcode.trim() !== 'origo321') {
+      setStatusMessage('Invalid passcode. Ask a BGC at hand for the code!');
+      return;
+    }
+
     if (!name.trim() || !umuId.trim() || barlag === "initialValue" || !date) {
       alert('Please fill out all fields before submitting!');
       return;
@@ -60,7 +73,7 @@ function WorkerForm() {
         .from('shifts')
         .insert([
           {
-            name: name.trim(),
+            name: name.toUpperCase().trim(),
             umu_id: umuId.toLowerCase().trim(),
             barlag: barlag,
             work_date: date,
@@ -87,6 +100,18 @@ function WorkerForm() {
 
   return (
     <form className='form-box' onSubmit={handleSubmit}>
+
+      <div style={{ display: 'none' }} aria-hidden='true'>
+        <input
+          type='text'
+          name='user_anti_bot_verify'
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+          tabIndex="-1"
+          autoComplete='off'
+        />
+      </div>
+
       <div className="form-group">
         <label>Name: </label>
         <input
@@ -146,6 +171,16 @@ function WorkerForm() {
           onChange={(e) => setEndTime(e.target.value)}
         />
       </div>
+
+      <div className='form-group'>
+        <label>Passcode: </label>
+        <input
+          type='password'
+          value={passcode}
+          onChange={(e) => setPasscode(e.target.value)}
+          placeholder='Enter passcode'
+        />
+      </div>    
 
       <div className='after-form'>
         <h3>You have worked for: {calculateDuration()}</h3>
