@@ -1,6 +1,6 @@
 import { supabase } from './supabaseClient';
 import { useState, useRef, useEffect } from 'react';
-import './App_v2.css';
+import './HomeApp.css';
 
 function ObsBox() {
   return (
@@ -223,7 +223,7 @@ function LiveWallpaper() {
   return <canvas ref={canvasRef} className='live-wallpaper' />;
 }
 
-function App() {
+function HomeApp() {
   const [hasReadWarning, setHasReadWarning] = useState(false);
   const formSectionRef = useRef(null);
   const handleAcceptWarning = () => {
@@ -278,4 +278,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomeApp;

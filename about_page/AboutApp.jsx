@@ -1,6 +1,6 @@
-import'./App_about.css';
+import'./AboutApp.css';
 
-function App() {
+function AboutApp() {
 
     return (
         <div className='page'>
@@ -20,4 +20,4 @@ function App() {
     );
 }
 
-export default App;
+export default AboutApp;
