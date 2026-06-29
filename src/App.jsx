@@ -242,13 +242,19 @@ function App() {
 
   return (
     <div className="main-page">
+      <nav className='navbar'>
+        <div className='nav-logo'>Origo Liggaren</div>
+        <div className='nav-links'>
+          <a href="/OrigoLiggaren_v2/" className='active'>Home</a>
+          <a href="/OrigoLiggaren_v2/about_page/">About</a>
+        </div>
+      </nav>
+
       <LiveWallpaper />
 
       <section className='welcome-section'>
         <h1>Welcome to Origo Liggaren</h1>
         <p>Hi! I am Origo Liggaren. I have left the physical world and transcended into digital land. Thank you for working at Origo, you keep this place running! Please enter your information for the BGC below.</p>
-
-        <a href="/OrigoLiggaren_v2/about_page/">Go to about page</a>
 
         <div className='scroll-arrow'>⬇</div>   
       </section>
