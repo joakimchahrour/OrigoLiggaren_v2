@@ -14,6 +14,8 @@ function App() {
 
             <h1>Welcome to the about page</h1>
 
+            <a href="https://github.com/joakimchahrour/OrigoLiggaren_v2">GitHub</a>
+
         </div>
     );
 }
