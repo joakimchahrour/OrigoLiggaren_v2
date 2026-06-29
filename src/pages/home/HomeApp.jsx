@@ -55,7 +55,7 @@ function WorkerForm() {
       return;
     }
 
-    if (passcode.trim() !== 'origo321') {
+    if (passcode.trim() !== import.meta.env.VITE_PASSCODE) {
       setStatusMessage('Invalid passcode. Ask a BGC at hand for the code!');
       return;
     }
